@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hint-box {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Animal Classifier</h1>
+        <div class="hint-box">
+            <p>Hint: For the following questions, 0 means No and 1 means Yes, except for the number of legs.</p>
+        </div>
+        <form action="/predict" method="post">
+            <label for="hair">Does the animal have hair?</label>
+            <input type="number" id="hair" name="hair" value="0" min="0" max="1" step="1" required>
+
+            <label for="feathers">Does the animal have feathers?</label>
+            <input type="number" id="feathers" name="feathers" value="0" min="0" max="1" step="1" required>
+
+            <label for="eggs">Does the animal lay eggs?</label>
+            <input type="number" id="eggs" name="eggs" value="0" min="0" max="1" step="1" required>
+
+            <label for="milk">Does the animal produce milk?</label>
+            <input type="number" id="milk" name="milk" value="0" min="0" max="1" step="1" required>
+
+            <label for="airborne">Is the animal airborne?</label>
+            <input type="number" id="airborne" name="airborne" value="0" min="0" max="1" step="1" required>
+
+            <label for="aquatic">Is the animal aquatic?</label>
+            <input type="number" id="aquatic" name="aquatic" value="0" min="0" max="1" step="1" required>
+
+            <label for="predator">Is the animal a predator?</label>
+            <input type="number" id="predator" name="predator" value="0" min="0" max="1" step="1" required>
+
+            <label for="toothed">Does the animal have teeth?</label>
+            <input type="number" id="toothed" name="toothed" value="0" min="0" max="1" step="1" required>
+
+            <label for="backbone">Does the animal have a backbone?</label>
+            <input type="number" id="backbone" name="backbone" value="0" min="0" max="1" step="1" required>
+
+            <label for="breathes">Does the animal breathe air?</label>
+            <input type="number" id="breathes" name="breathes" value="0" min="0" max="1" step="1" required>
+
+            <label for="venomous">Is the animal venomous?</label>
+            <input type="number" id="venomous" name="venomous" value="0" min="0" max="1" step="1" required>
+
+            <label for="fins">Does the animal have fins?</label>
+            <input type="number" id="fins" name="fins" value="0" min="0" max="1" step="1" required>
+
+            <label for="legs">How many legs does the animal have?</label>
+            <input type="number" id="legs" name="legs" value="4" min="0" max="8" step="1" required>
+
+            <label for="tail">Does the animal have a tail?</label>
+            <input type="number" id="tail" name="tail" value="0" min="0" max="1" step="1" required>
+
+            <label for="domestic">Is the animal domestic?</label>
+            <input type="number" id="domestic" name="domestic" value="0" min="0" max="1" step="1" required>
+
+            <label for="catsize">Is the animal cat-sized?</label>
+            <input type="number" id="catsize" name="catsize" value="0" min="0" max="1" step="1" required>
+            
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
